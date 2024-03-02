@@ -2,6 +2,7 @@
 
 // Selecionando um elemento
 let elemento = document.getElementById("meu-elemento");
+console.log(elemento);
 
 // Alterando o conteúdo
 elemento.innerHTML = "Novo conteúdo";
