@@ -1,8 +1,5 @@
-function dividir(a, b) {
-	if (b === 0) {
-		throw new Error("Divisão por zero");
-	}
-	return a / b;
+function ehPar(numero) {
+	return numero % 2 === 0;
 }
 
-module.exports = dividir;
+module.exports = ehPar;

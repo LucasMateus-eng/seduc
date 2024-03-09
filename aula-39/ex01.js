@@ -1,5 +1,5 @@
-function somar(a, b) {
-	return a + b;
-}
+// Recuperando um recurso
 
-module.exports = somar;
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+	.then((response) => response.json())
+	.then((json) => console.log(json));

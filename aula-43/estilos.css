@@ -1,0 +1,46 @@
+/* CSS dos exemplos */
+
+.botao {
+  color: red;
+  margin: 10px;
+}
+
+.botao:hover {
+  background-color: blue;
+}
+
+.container p {
+  font-size: 16px;
+}
+
+.elemento + .outro-elemento {
+  margin-left: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.ativo {
+  color: green;
+}
+
+::before {
+  content: "• ";
+}
+
+::after {
+  content: " (clique aqui)";
+}
+
+.lista li:nth-child(2n) {
+  background-color: #ccc;
+}
+
+.par {
+  background-color: aqua;
+}

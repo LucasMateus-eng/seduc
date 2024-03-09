@@ -1,6 +1,7 @@
 // Usando Jest
-const dividir = require("./ex03");
+const ehPar = require("./ex03");
 
-test("deve lançar uma exceção para divisão por zero", () => {
-	expect(() => dividir(10, 0)).toThrowError("Divisão por zero");
+test("deve retornar true para números pares", () => {
+	const resultado = ehPar(4);
+	expect(resultado).toBe(true);
 });

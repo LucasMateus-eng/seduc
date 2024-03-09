@@ -1,18 +1,12 @@
 // Usando Jest
-const usuario = require("./ex04");
-const bancoDeDados = require("./database");
+const calcularImposto = require("./ex04");
 
-jest.mock("./database");
+test("deve calcular o imposto para renda menor que 1000", () => {
+	const imposto = calcularImposto(800);
+	expect(imposto).toBe(80);
+});
 
-describe("consultandoUsuario", () => {
-	test("deve retornar o usuário com o userId fornecido", () => {
-		const usuarioId = "123";
-		const usuarioObj = { id: usuarioId, name: "John" };
-
-		bancoDeDados.consultandoUsuarioNoBancoDeDados.mockReturnValue(usuarioObj);
-
-		const result = usuario.consultandoUsuario(usuarioId);
-
-		expect(result).toBe(usuarioObj);
-	});
+test("deve calcular o imposto para renda maior que 1000", () => {
+	const imposto = calcularImposto(1500);
+	expect(imposto).toBe(300);
 });
